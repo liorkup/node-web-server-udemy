@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -17,6 +18,6 @@ app.get('/about', (req, res) => {
   }); // ./views is the default directory that express is using for the templates
 });
 
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`);
 }); // second arg is methid to run while server is launching
